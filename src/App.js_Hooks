@@ -1,0 +1,89 @@
+import React, { useState } from 'react'
+import './App.css'
+import Person from './components/Person'
+
+function App() {
+  const [personsState, setPersonsState] = useState({
+    persons: [
+      {
+        name: 'Burhan',
+        age: '24',
+      },
+      {
+        name: 'Hussain',
+        age: '21',
+      },
+      {
+        name: 'Mohammed',
+        age: '21',
+      },
+      {
+        name: 'Ammar',
+        age: '30',
+      },
+      {
+        name: 'Fatema',
+        age: '15',
+      },
+    ],
+    otherState: 'Some data',
+  })
+
+  const switchNameHandler = () => {
+    setPersonsState({
+      persons: [
+        {
+          name: 'Batul',
+          age: '34',
+        },
+        {
+          name: 'Farida',
+          age: '22',
+        },
+        {
+          name: 'Zainab',
+          age: '21',
+        },
+        {
+          name: 'Insiyah',
+          age: '30',
+        },
+        {
+          name: 'Tasneem',
+          age: '15',
+        },
+      ]
+    })
+  }
+
+  return (
+    <div className="App">
+      <h1>Hi this is my react app</h1>
+      <p>This is really working</p>
+      <button onClick={switchNameHandler}>Switch</button>
+      <Person
+        name={personsState.persons[0].name}
+        age={personsState.persons[0].age}
+      />
+      <Person
+        name={personsState.persons[1].name}
+        age={personsState.persons[1].age}
+        click={switchNameHandler}
+      />
+      <Person
+        name={personsState.persons[2].name}
+        age={personsState.persons[2].age}
+      />
+      <Person
+        name={personsState.persons[3].name}
+        age={personsState.persons[3].age}
+      />
+      <Person
+        name={personsState.persons[4].name}
+        age={personsState.persons[4].age}
+      />
+    </div>
+  )
+}
+
+export default App
