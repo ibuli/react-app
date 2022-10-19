@@ -36,6 +36,7 @@ class App extends Component {
           type="text"
           onChange={this.inputChangeHandler}
           value={this.state.userInput}
+          style={{ padding: '12px 20px', borderRadius: '15px' }}
         />
         <p>{this.state.userInput}</p>
 
