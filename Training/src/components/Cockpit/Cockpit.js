@@ -46,6 +46,7 @@ const Cockpit = (props) => {
         Toggle Persons
       </button>
       <button onClick={authContext.login}>Log in</button>
+      <button type='button'>Cancel</button>
     </div>
   )
 }

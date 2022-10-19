@@ -25,6 +25,7 @@ class Person extends Component {
         )}
         <h2 onClick={this.props.click}>This is {this.props.name}</h2>
         <p>I'm {this.props.age} years old</p>
+        <p>My email address is {this.props.email}</p>
         <input
           type="text"
           ref={this.inputElementRef}
